@@ -46,9 +46,9 @@ response = llm.create_chat_completion(
 )
 
 if len(response['choices']) != 1:
-    print(f"Error: wrong number of choices {len(response['choices'])}")
+    print("Error: wrong number of choices %s" % len(response['choices']))
 else:
     function = json.loads(response['choices'][0]['message']['content'])['function']
 
 # Execute the command against the hardware (and flip on/off the light)
-subprocess.run(["python", "-c", f"import commands; commands.{function}()"])
+subprocess.run(["python", "-c", "import commands; commands.%s()" % function])
