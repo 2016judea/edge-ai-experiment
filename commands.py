@@ -1,11 +1,12 @@
 from gpiozero import LED
   
-# led = LED(17) 
+# GPIO header map: https://pinout.xyz/
+led = LED(17) 
 
 def turn_on_led(): 
-    # led.on()
     print("LED on!")
+    led.on()
     
 def turn_off_led(): 
-    # led.off()
     print("LED off!")
+    led.off()
