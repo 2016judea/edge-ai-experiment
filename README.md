@@ -23,7 +23,7 @@ It turned out to be easy — which is the finding.
 
 ```mermaid
 flowchart LR
-    A["Natural language<br/><i>&quot;turn off the LED&quot;</i>"] --> B["Qwen2-1.5B<br/>Q2_K quantized · llama.cpp"]
+    A["Natural language<br/><i>#quot;turn off the LED#quot;</i>"] --> B["Qwen2-1.5B<br/>Q2_K quantized · llama.cpp"]
     B --> C["JSON, schema-constrained<br/>one field: the function name"]
     C --> D["commands.py<br/>gpiozero"]
     D --> E["GPIO pin 17"]
